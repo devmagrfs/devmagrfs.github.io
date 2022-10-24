@@ -6762,21 +6762,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^4.24.0":
-  version: 4.24.0
-  resolution: "gatsby-plugin-manifest@npm:4.24.0"
-  dependencies:
-    "@babel/runtime": ^7.15.4
-    gatsby-core-utils: ^3.24.0
-    gatsby-plugin-utils: ^3.18.0
-    semver: ^7.3.7
-    sharp: ^0.30.7
-  peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 5040a3844e5cc0444440a7acedbc92c80d4ca05e2ef79ce61c05ae218e53ff4c6aff98af59548cfc7de0f74618d61bce45bc962406595ff923f9bc7ffa01d573
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-page-creator@npm:^4.24.1":
   version: 4.24.1
   resolution: "gatsby-plugin-page-creator@npm:4.24.1"
@@ -6796,6 +6781,18 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: 46b6944dd7de9fb3f5bcf39fc49932485e09331b0e3c67f71a4ee98013919a4773bd75fd106e66bfb87d45e782d93a68dd78a25bd37e637fd3cb834cc040ec69
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-react-helmet@npm:^5.24.0":
+  version: 5.24.0
+  resolution: "gatsby-plugin-react-helmet@npm:5.24.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+  peerDependencies:
+    gatsby: ^4.0.0-next
+    react-helmet: ^5.1.3 || ^6.0.0
+  checksum: 9f9c44b3bc664edecb05e975506de61c5b60cf621a34c9c5c14a8fcc1e7bd7f5ed34e51ce05085fcb1025cc3c95ce9ba6436a9c2125a22bbf357bee7cb2ae22f
   languageName: node
   linkType: hard
 
@@ -6925,14 +6922,17 @@ __metadata:
   dependencies:
     gatsby: ^4.24.4
     gatsby-plugin-image: ^2.24.0
-    gatsby-plugin-manifest: ^4.24.0
+    gatsby-plugin-react-helmet: ^5.24.0
     gatsby-plugin-sharp: ^4.24.0
+    gatsby-plugin-typescript: ^4.24.0
     gatsby-source-filesystem: ^4.24.0
     gatsby-transformer-sharp: ^4.24.0
     prettier: ^2.7.1
     prop-types: ^15.8.1
     react: ^18.1.0
     react-dom: ^18.1.0
+    react-helmet: ^6.1.0
+    typescript: ^4.8.4
   languageName: unknown
   linkType: soft
 
@@ -10912,6 +10912,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "react-fast-compare@npm:3.2.0"
+  checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
+  languageName: node
+  linkType: hard
+
+"react-helmet@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-helmet@npm:6.1.0"
+  dependencies:
+    object-assign: ^4.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.1.1
+    react-side-effect: ^2.1.0
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -10944,6 +10965,15 @@ __metadata:
     react: 0.0.0-experimental-c8b778b7f-20220825
     webpack: ^5.59.0
   checksum: 55fc67030b775ededaafc149aa17ebdac6cd4df7f9d61f194f3e3d98bb5cf83a67bd313ce25b9c597df55fa88162840690ba2b61e22d36532478a008c5209385
+  languageName: node
+  linkType: hard
+
+"react-side-effect@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "react-side-effect@npm:2.1.2"
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0
+  checksum: c5eb1f42b464fb093bca59aaae0f1b2060373a2aaff95275b8781493628cdbbb6acdd6014e7883782c65c361f35a30f28cc515d68a1263ddb39cbbc47110be53
   languageName: node
   linkType: hard
 
@@ -12577,6 +12607,26 @@ __metadata:
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
   checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^4.8.4":
+  version: 4.8.4
+  resolution: "typescript@npm:4.8.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.8.4#~builtin<compat/typescript>":
+  version: 4.8.4
+  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=701156"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 301459fc3eb3b1a38fe91bf96d98eb55da88a9cb17b4ef80b4d105d620f4d547ba776cc27b44cc2ef58b66eda23fe0a74142feb5e79a6fb99f54fc018a696afa
   languageName: node
   linkType: hard
 
