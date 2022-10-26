@@ -68,7 +68,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-.pnp.*
 .yarn/*
 !.yarn/cache
 !.yarn/patches

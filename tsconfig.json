@@ -9,11 +9,12 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "baseUrl": "./src",
-		"noEmit": true,
+    "noEmit": true,
     "paths": {
       "components/*": ["./components/*"],
       "utils/*": ["./utils/*"],
-      "hooks/*": ["./hooks/*"]
+      "hooks/*": ["./hooks/*"],
+      "pages/*": ["./pages/*"]
     },
     "esModuleInterop": true,
     "skipLibCheck": true,
